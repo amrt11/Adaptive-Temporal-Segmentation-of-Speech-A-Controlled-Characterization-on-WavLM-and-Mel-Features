@@ -1,0 +1,56 @@
+{
+  "config": {
+    "steps": 1200,
+    "batch_size": 64,
+    "test_size": 256,
+    "t_steps": 128,
+    "dims": 4,
+    "segments": 4,
+    "noise": 0.05,
+    "min_len": 8,
+    "lr": 0.002,
+    "tau": 0.15,
+    "entropy_weight": 0.002,
+    "log_every": 200,
+    "seed": 7,
+    "output": "experiments\\results_experiment_a.json"
+  },
+  "results": [
+    {
+      "condition": "clean_unequal_4_segments",
+      "noise_std": 0.05,
+      "segments": 4,
+      "uniform_mse": 0.34000334719894454,
+      "dp_mse": 0.002417419174889801,
+      "dp_boundary_mae_frames": 0.0,
+      "mse": 0.4125537872314453,
+      "boundary_mae_frames": 23.35546875,
+      "partition_max_error": 1.1920928955078125e-07,
+      "learned_gap_closed": -0.2149095504577169
+    },
+    {
+      "condition": "noisy_unequal_4_segments",
+      "noise_std": 0.3,
+      "segments": 4,
+      "uniform_mse": 0.43634021980687976,
+      "dp_mse": 0.08688784303376451,
+      "dp_boundary_mae_frames": 0.00390625,
+      "mse": 0.49073201417922974,
+      "boundary_mae_frames": 24.75130271911621,
+      "partition_max_error": 1.1920928955078125e-07,
+      "learned_gap_closed": -0.1556486605545805
+    },
+    {
+      "condition": "clean_unequal_6_segments",
+      "noise_std": 0.05,
+      "segments": 6,
+      "uniform_mse": 0.3397809998859884,
+      "dp_mse": 0.0023760038739055744,
+      "dp_boundary_mae_frames": 0.0,
+      "mse": 0.37240713834762573,
+      "boundary_mae_frames": 16.21796989440918,
+      "partition_max_error": 1.1920928955078125e-07,
+      "learned_gap_closed": -0.09669725951677649
+    }
+  ]
+}

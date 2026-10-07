@@ -1,0 +1,72 @@
+{
+  "config": {
+    "segments": 32,
+    "latent_dim": 32,
+    "warmup_steps": 300,
+    "anneal_steps": 1700,
+    "snapshot_every": 250,
+    "batch_size": 8,
+    "lr": 0.002,
+    "tau_start": 0.35,
+    "tau_end": 0.08,
+    "boundary_weight": 1.0,
+    "entropy_weight": 0.001,
+    "eval_size": 48,
+    "pca_dim": 64,
+    "seed": 7,
+    "output": "C:\\Users\\Lenovo\\Desktop\\new research\\experiments\\results_experiment_drift.json"
+  },
+  "final_soft_mse": 0.09308,
+  "reference_soft_mse_C": 0.0941,
+  "analysis": {
+    "warmup_end": {
+      "mean_disp_vs_warmstart_ssl_frames": 0.0,
+      "mean_disp_vs_dp_ssl_frames": 9.307,
+      "median_disp_vs_dp_ssl_frames": 7.887,
+      "p90_disp_vs_dp_ssl_frames": 15.774
+    },
+    "anneal_step_250": {
+      "mean_disp_vs_warmstart_ssl_frames": 3.449,
+      "mean_disp_vs_dp_ssl_frames": 9.565,
+      "median_disp_vs_dp_ssl_frames": 8.065,
+      "p90_disp_vs_dp_ssl_frames": 17.674
+    },
+    "anneal_step_500": {
+      "mean_disp_vs_warmstart_ssl_frames": 6.987,
+      "mean_disp_vs_dp_ssl_frames": 10.058,
+      "median_disp_vs_dp_ssl_frames": 8.661,
+      "p90_disp_vs_dp_ssl_frames": 18.423
+    },
+    "anneal_step_750": {
+      "mean_disp_vs_warmstart_ssl_frames": 7.294,
+      "mean_disp_vs_dp_ssl_frames": 10.073,
+      "median_disp_vs_dp_ssl_frames": 8.935,
+      "p90_disp_vs_dp_ssl_frames": 18.168
+    },
+    "anneal_step_1000": {
+      "mean_disp_vs_warmstart_ssl_frames": 7.543,
+      "mean_disp_vs_dp_ssl_frames": 10.288,
+      "median_disp_vs_dp_ssl_frames": 9.21,
+      "p90_disp_vs_dp_ssl_frames": 18.51
+    },
+    "anneal_step_1250": {
+      "mean_disp_vs_warmstart_ssl_frames": 7.872,
+      "mean_disp_vs_dp_ssl_frames": 10.378,
+      "median_disp_vs_dp_ssl_frames": 9.516,
+      "p90_disp_vs_dp_ssl_frames": 18.532
+    },
+    "anneal_step_1500": {
+      "mean_disp_vs_warmstart_ssl_frames": 8.162,
+      "mean_disp_vs_dp_ssl_frames": 10.687,
+      "median_disp_vs_dp_ssl_frames": 9.661,
+      "p90_disp_vs_dp_ssl_frames": 18.652
+    },
+    "anneal_step_1700": {
+      "mean_disp_vs_warmstart_ssl_frames": 7.859,
+      "mean_disp_vs_dp_ssl_frames": 10.462,
+      "median_disp_vs_dp_ssl_frames": 9.29,
+      "p90_disp_vs_dp_ssl_frames": 18.09
+    }
+  },
+  "note": "Displacements in 50 Hz SSL frames; boundary k matched to boundary k (monotonic partition). warmup_end IS the step-300 DP warm start, so its disp_vs_dp column is the warm-start quality baseline."
+}

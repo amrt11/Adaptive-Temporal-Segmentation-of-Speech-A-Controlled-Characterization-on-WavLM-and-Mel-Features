@@ -1,0 +1,142 @@
+{
+  "config": {
+    "k": 32,
+    "seed": 7,
+    "latent_dim": 32,
+    "codebooks": [
+      64,
+      256,
+      1024
+    ],
+    "warmup_steps": 300,
+    "anneal_steps": 1700,
+    "lr": 0.002,
+    "vq_weight": 1.0,
+    "eval_size": 48,
+    "mel_rate_hz": 86.1328125,
+    "n_mels": 80,
+    "standardization": "per-dimension z-score (train stats), all arms",
+    "dp_warm_start": "recomputed on standardized mel (cached)",
+    "decision_rule": "F-NULL: frame < adaptive at every N (gap ~ WavLM, frame/adaptive ~0.5) -> negative result is representation-class independent; F-POSITIVE: adaptive <= frame at some N or frame/adaptive > 0.9 -> segmentation competitive on acoustic features; PARTIAL: frame/adaptive in (0.7, 0.9). Sanity: adaptive must beat uniform (as on WavLM in B).",
+    "output": "C:\\Users\\Lenovo\\Desktop\\new research\\experiments\\results_experiment_f.json"
+  },
+  "points": [
+    {
+      "arm": "adaptive",
+      "K": 32,
+      "codebook": 64,
+      "dims": 32,
+      "mse": 0.22135849605367192,
+      "perplexity": 17.826505343119305,
+      "bits_per_utt_exact": 356.6835737784065,
+      "bits_per_utt_adj": 192.0,
+      "bits_per_sec_exact": 59.24723384251103,
+      "train_seconds": 40.4,
+      "wall_seconds": 42.2
+    },
+    {
+      "arm": "uniform",
+      "K": 32,
+      "codebook": 64,
+      "dims": 32,
+      "mse": 0.5013583822092793,
+      "perplexity": 37.67492357889811,
+      "bits_per_utt_exact": 192.0,
+      "bits_per_utt_adj": 192.0,
+      "bits_per_sec_exact": 31.89232623543592,
+      "train_seconds": 24.0,
+      "wall_seconds": 24.0
+    },
+    {
+      "arm": "frame",
+      "K": 32,
+      "codebook": 64,
+      "dims": 32,
+      "mse": 0.15879244624718264,
+      "perplexity": 57.092480977376304,
+      "bits_per_utt_exact": 3111.25,
+      "bits_per_utt_adj": 3111.25,
+      "bits_per_sec_exact": 516.796875,
+      "train_seconds": 13.1,
+      "wall_seconds": 13.1
+    },
+    {
+      "arm": "adaptive",
+      "K": 32,
+      "codebook": 256,
+      "dims": 32,
+      "mse": 0.22210394077904017,
+      "perplexity": 13.48815393447876,
+      "bits_per_utt_exact": 420.6835737784065,
+      "bits_per_utt_adj": 256.0,
+      "bits_per_sec_exact": 69.878009254323,
+      "train_seconds": 40.0,
+      "wall_seconds": 40.0
+    },
+    {
+      "arm": "uniform",
+      "K": 32,
+      "codebook": 256,
+      "dims": 32,
+      "mse": 0.5194311158742805,
+      "perplexity": 19.929561297098797,
+      "bits_per_utt_exact": 256.0,
+      "bits_per_utt_adj": 256.0,
+      "bits_per_sec_exact": 42.52310164724789,
+      "train_seconds": 18.9,
+      "wall_seconds": 18.9
+    },
+    {
+      "arm": "frame",
+      "K": 32,
+      "codebook": 256,
+      "dims": 32,
+      "mse": 0.13385905950674815,
+      "perplexity": 209.51312764485678,
+      "bits_per_utt_exact": 4148.333333333333,
+      "bits_per_utt_adj": 4148.333333333333,
+      "bits_per_sec_exact": 689.0625,
+      "train_seconds": 13.7,
+      "wall_seconds": 13.7
+    },
+    {
+      "arm": "adaptive",
+      "K": 32,
+      "codebook": 1024,
+      "dims": 32,
+      "mse": 0.22141514661538164,
+      "perplexity": 21.706692377726238,
+      "bits_per_utt_exact": 484.6835737784065,
+      "bits_per_utt_adj": 320.0,
+      "bits_per_sec_exact": 80.50878466613497,
+      "train_seconds": 46.4,
+      "wall_seconds": 46.4
+    },
+    {
+      "arm": "uniform",
+      "K": 32,
+      "codebook": 1024,
+      "dims": 32,
+      "mse": 0.55255259006988,
+      "perplexity": 10.396558920542398,
+      "bits_per_utt_exact": 320.0,
+      "bits_per_utt_adj": 320.0,
+      "bits_per_sec_exact": 53.153877059059866,
+      "train_seconds": 23.7,
+      "wall_seconds": 23.7
+    },
+    {
+      "arm": "frame",
+      "K": 32,
+      "codebook": 1024,
+      "dims": 32,
+      "mse": 0.12032626701070631,
+      "perplexity": 660.7834879557291,
+      "bits_per_utt_exact": 5185.416666666667,
+      "bits_per_utt_adj": 5185.416666666667,
+      "bits_per_sec_exact": 861.3281250000001,
+      "train_seconds": 17.8,
+      "wall_seconds": 17.8
+    }
+  ]
+}

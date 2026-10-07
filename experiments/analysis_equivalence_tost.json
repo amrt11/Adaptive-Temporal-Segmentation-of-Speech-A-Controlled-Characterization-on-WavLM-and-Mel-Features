@@ -1,0 +1,281 @@
+{
+  "config": {
+    "results": "experiments\\results_experiment_c.json",
+    "delta": 0.01,
+    "alpha": 0.05,
+    "n_bootstrap": 10000,
+    "seed": 42,
+    "output": "experiments\\analysis_equivalence_tost.json"
+  },
+  "comparisons": {
+    "learned_K32_vs_dp_K32": {
+      "note": "primary: paper's learned-vs-DP tie claim",
+      "n": 48,
+      "mean_a": 0.44197916666666665,
+      "mean_b": 0.4469145833333334,
+      "difference_test": {
+        "t": -0.9708851255079834,
+        "p_two_sided": 0.33657566571441977,
+        "mean_diff": -0.004935416666666664
+      },
+      "parametric_tost": {
+        "n": 48,
+        "mean_diff": -0.004935416666666664,
+        "sd_diff": 0.035218965451618095,
+        "se": 0.0050834197960179595,
+        "df": 47,
+        "t_lower": 0.9962945293836682,
+        "p_lower": 0.1621044747395804,
+        "t_upper": -2.9380647803996354,
+        "p_upper": 0.002551973134100391,
+        "p_tost": 0.1621044747395804,
+        "alpha": 0.05,
+        "ci95_lower": -0.015161938218611894,
+        "ci95_upper": 0.005291104885278565,
+        "is_equivalent": false
+      },
+      "bootstrap_tost": {
+        "n": 48,
+        "mean_diff": -0.004935416666666664,
+        "n_boot": 10000,
+        "ci_lower": -0.014689583333333325,
+        "ci_upper": 0.004883385416666666,
+        "p_tost": 0.1537,
+        "alpha": 0.05,
+        "is_equivalent": false
+      }
+    },
+    "learned_K32_vs_uniform": {
+      "note": "control: expected NOT equivalent",
+      "n": 48,
+      "mean_a": 0.44197916666666665,
+      "mean_b": 0.4271729166666667,
+      "difference_test": {
+        "t": 2.8266420557321266,
+        "p_two_sided": 0.006887626536365977,
+        "mean_diff": 0.014806249999999998
+      },
+      "parametric_tost": {
+        "n": 48,
+        "mean_diff": 0.014806249999999998,
+        "sd_diff": 0.03629066116462963,
+        "se": 0.005238105748117104,
+        "df": 47,
+        "t_lower": 4.73572913431862,
+        "p_lower": 1.0216900347198707e-05,
+        "t_upper": 0.917554977145633,
+        "p_upper": 0.8182317227298804,
+        "p_tost": 0.8182317227298804,
+        "alpha": 0.05,
+        "ci95_lower": 0.004268540451312058,
+        "ci95_upper": 0.025343959548687938,
+        "is_equivalent": false
+      },
+      "bootstrap_tost": {
+        "n": 48,
+        "mean_diff": 0.014806249999999998,
+        "n_boot": 10000,
+        "ci_lower": 0.004804062500000001,
+        "ci_upper": 0.02497291666666666,
+        "p_tost": 0.8262,
+        "alpha": 0.05,
+        "is_equivalent": false
+      }
+    },
+    "learned_K16_vs_dp_K16": {
+      "note": "secondary: K=16 comparison",
+      "n": 48,
+      "mean_a": 0.23734166666666665,
+      "mean_b": 0.24242708333333332,
+      "difference_test": {
+        "t": -0.9234732013528061,
+        "p_two_sided": 0.360477539798046,
+        "mean_diff": -0.0050854166666666695
+      },
+      "parametric_tost": {
+        "n": 48,
+        "mean_diff": -0.0050854166666666695,
+        "sd_diff": 0.03815248793975181,
+        "se": 0.005506837295567415,
+        "df": 47,
+        "t_lower": 0.8924511601766765,
+        "p_lower": 0.18834892212622395,
+        "t_upper": -2.7393975628822886,
+        "p_upper": 0.004335299931091778,
+        "p_tost": 0.18834892212622395,
+        "alpha": 0.05,
+        "ci95_lower": -0.01616374435667769,
+        "ci95_upper": 0.005992911023344353,
+        "is_equivalent": false
+      },
+      "bootstrap_tost": {
+        "n": 48,
+        "mean_diff": -0.0050854166666666695,
+        "n_boot": 10000,
+        "ci_lower": -0.016047968750000006,
+        "ci_upper": 0.005310520833333328,
+        "p_tost": 0.1842,
+        "alpha": 0.05,
+        "is_equivalent": false
+      }
+    }
+  },
+  "sensitivity": {
+    "learned_K32_vs_dp_K32": [
+      {
+        "delta": 0.005,
+        "parametric_equivalent": false,
+        "parametric_p_tost": 0.4949585819500889,
+        "bootstrap_equivalent": false,
+        "bootstrap_ci": [
+          -0.014689583333333325,
+          0.004883385416666666
+        ]
+      },
+      {
+        "delta": 0.01,
+        "parametric_equivalent": false,
+        "parametric_p_tost": 0.1621044747395804,
+        "bootstrap_equivalent": false,
+        "bootstrap_ci": [
+          -0.014689583333333325,
+          0.004883385416666666
+        ]
+      },
+      {
+        "delta": 0.02,
+        "parametric_equivalent": true,
+        "parametric_p_tost": 0.002381298199826466,
+        "bootstrap_equivalent": true,
+        "bootstrap_ci": [
+          -0.014689583333333325,
+          0.004883385416666666
+        ]
+      },
+      {
+        "delta": 0.03,
+        "parametric_equivalent": true,
+        "parametric_p_tost": 5.31546578043437e-06,
+        "bootstrap_equivalent": true,
+        "bootstrap_ci": [
+          -0.014689583333333325,
+          0.004883385416666666
+        ]
+      },
+      {
+        "delta": 0.05,
+        "parametric_equivalent": true,
+        "parametric_p_tost": 6.732453229135891e-12,
+        "bootstrap_equivalent": true,
+        "bootstrap_ci": [
+          -0.014689583333333325,
+          0.004883385416666666
+        ]
+      }
+    ],
+    "learned_K32_vs_uniform": [
+      {
+        "delta": 0.005,
+        "parametric_equivalent": false,
+        "parametric_p_tost": 0.9662887386658912,
+        "bootstrap_equivalent": false,
+        "bootstrap_ci": [
+          0.004804062500000001,
+          0.02497291666666666
+        ]
+      },
+      {
+        "delta": 0.01,
+        "parametric_equivalent": false,
+        "parametric_p_tost": 0.8182317227298804,
+        "bootstrap_equivalent": false,
+        "bootstrap_ci": [
+          0.004804062500000001,
+          0.02497291666666666
+        ]
+      },
+      {
+        "delta": 0.02,
+        "parametric_equivalent": false,
+        "parametric_p_tost": 0.16325163260742007,
+        "bootstrap_equivalent": false,
+        "bootstrap_ci": [
+          0.004804062500000001,
+          0.02497291666666666
+        ]
+      },
+      {
+        "delta": 0.03,
+        "parametric_equivalent": true,
+        "parametric_p_tost": 0.0028243867626843023,
+        "bootstrap_equivalent": true,
+        "bootstrap_ci": [
+          0.004804062500000001,
+          0.02497291666666666
+        ]
+      },
+      {
+        "delta": 0.05,
+        "parametric_equivalent": true,
+        "parametric_p_tost": 1.0919772354256702e-08,
+        "bootstrap_equivalent": true,
+        "bootstrap_ci": [
+          0.004804062500000001,
+          0.02497291666666666
+        ]
+      }
+    ],
+    "learned_K16_vs_dp_K16": [
+      {
+        "delta": 0.005,
+        "parametric_equivalent": false,
+        "parametric_p_tost": 0.5061549248185861,
+        "bootstrap_equivalent": false,
+        "bootstrap_ci": [
+          -0.016047968750000006,
+          0.005310520833333328
+        ]
+      },
+      {
+        "delta": 0.01,
+        "parametric_equivalent": false,
+        "parametric_p_tost": 0.18834892212622395,
+        "bootstrap_equivalent": false,
+        "bootstrap_ci": [
+          -0.016047968750000006,
+          0.005310520833333328
+        ]
+      },
+      {
+        "delta": 0.02,
+        "parametric_equivalent": true,
+        "parametric_p_tost": 0.0047005482664429455,
+        "bootstrap_equivalent": true,
+        "bootstrap_ci": [
+          -0.016047968750000006,
+          0.005310520833333328
+        ]
+      },
+      {
+        "delta": 0.03,
+        "parametric_equivalent": true,
+        "parametric_p_tost": 2.057801354259937e-05,
+        "bootstrap_equivalent": true,
+        "bootstrap_ci": [
+          -0.016047968750000006,
+          0.005310520833333328
+        ]
+      },
+      {
+        "delta": 0.05,
+        "parametric_equivalent": true,
+        "parametric_p_tost": 7.454152934315867e-11,
+        "bootstrap_equivalent": true,
+        "bootstrap_ci": [
+          -0.016047968750000006,
+          0.005310520833333328
+        ]
+      }
+    ]
+  }
+}

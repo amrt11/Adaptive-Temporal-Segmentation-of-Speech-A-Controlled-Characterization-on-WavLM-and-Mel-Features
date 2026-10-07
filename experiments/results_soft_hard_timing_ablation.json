@@ -1,0 +1,66 @@
+{
+  "config": {
+    "k": 32,
+    "codebook": 256,
+    "latent_dim": 32,
+    "warmup_steps": 300,
+    "anneal_steps": 1700,
+    "batch_size": 8,
+    "lr": 0.002,
+    "tau_start": 0.35,
+    "tau_end": 0.08,
+    "boundary_weight": 1.0,
+    "vq_weight": 1.0,
+    "eval_size": 48,
+    "pca_dim": 64,
+    "seed": 7,
+    "output": "experiments\\results_soft_hard_timing_ablation.json"
+  },
+  "points": [
+    {
+      "ablation": "soft_with_ud",
+      "K": 32,
+      "codebook": 256,
+      "dims": 32,
+      "mse": 0.18124142948841512,
+      "hard_mse": 0.3412289364230488,
+      "perplexity": 16.598132451375324,
+      "hard_mass": 0.8934820890426636,
+      "use_phase": true,
+      "use_duration": true,
+      "timing_mode": "density",
+      "train_seconds": 43.6,
+      "wall_seconds": 45.5
+    },
+    {
+      "ablation": "soft_no_ud",
+      "K": 32,
+      "codebook": 256,
+      "dims": 32,
+      "mse": 0.3503703720503498,
+      "hard_mse": 0.33859255570266233,
+      "perplexity": 16.403289635976154,
+      "hard_mass": 0.8967360158761343,
+      "use_phase": false,
+      "use_duration": false,
+      "timing_mode": "none",
+      "train_seconds": 40.5,
+      "wall_seconds": 40.6
+    },
+    {
+      "ablation": "soft_billed_ud",
+      "K": 32,
+      "codebook": 256,
+      "dims": 32,
+      "mse": 0.3432162105169412,
+      "hard_mse": 0.33570267184561625,
+      "perplexity": 16.285329818725586,
+      "hard_mass": 0.8904459873835245,
+      "use_phase": true,
+      "use_duration": true,
+      "timing_mode": "billed",
+      "train_seconds": 41.9,
+      "wall_seconds": 41.9
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "config": {
+    "records": "experiments\\segment_records_e_seed7.npz",
+    "reference_r2": 0.7037,
+    "output": "experiments\\analysis_duration_phone_class.json"
+  },
+  "n_utts": 48,
+  "conditions": {
+    "adaptive": {
+      "r2_full": 0.7043,
+      "r2_norm_control": -0.0067,
+      "r2_phone_only": 0.082,
+      "r2_additive_phone_plus_z": 0.6075,
+      "incremental_r2_beyond_phone": 0.5255,
+      "n_segments_eval": 1536
+    },
+    "adaptive_hard": {
+      "r2_full": 0.7228,
+      "r2_norm_control": 0.0319,
+      "r2_phone_only": 0.082,
+      "r2_additive_phone_plus_z": 0.622,
+      "incremental_r2_beyond_phone": 0.5399,
+      "n_segments_eval": 1536
+    },
+    "dp": {
+      "r2_full": 0.1392,
+      "r2_norm_control": 0.4362,
+      "r2_phone_only": -0.0228,
+      "r2_additive_phone_plus_z": 0.1018,
+      "incremental_r2_beyond_phone": 0.1246,
+      "n_segments_eval": 1536
+    },
+    "uniform": {
+      "r2_full": -0.0367,
+      "r2_norm_control": 0.0058,
+      "r2_phone_only": -0.0331,
+      "r2_additive_phone_plus_z": -0.0655,
+      "incremental_r2_beyond_phone": -0.0325,
+      "n_segments_eval": 1536
+    }
+  }
+}

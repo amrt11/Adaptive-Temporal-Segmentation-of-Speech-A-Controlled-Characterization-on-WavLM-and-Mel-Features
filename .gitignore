@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+*.log
+
+# Large binary files (features, model checkpoints)
+experiments/features_wavlm_l6/
+experiments/*.npz
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# Cache and temp
+.cache/
+.freebuff/
+*.cache
+*.tmp
+
+# Analysis artifacts (internal use only)
+cleanup/
+ANALYSIS.md
+
+# Results (keep JSON files, ignore backups)
+*_partial.bak.json
+*_smoke.json
+
+# Alignment directories (large, can be regenerated)
+experiments/alignments_c/
+experiments/alignments_c_smoke/
+
+# Environment files
+.env
+.env.local

@@ -1,0 +1,142 @@
+{
+  "config": {
+    "k": 32,
+    "seed": 7,
+    "latent_dim": 32,
+    "codebooks": [
+      4,
+      8,
+      16
+    ],
+    "warmup_steps": 300,
+    "anneal_steps": 1700,
+    "lr": 0.002,
+    "vq_weight": 1.0,
+    "eval_size": 48,
+    "mel_rate_hz": 86.1328125,
+    "n_mels": 80,
+    "standardization": "per-dimension z-score (train stats), all arms",
+    "dp_warm_start": "recomputed on standardized mel (cached)",
+    "decision_rule": "F-NULL: frame < adaptive at every N (gap ~ WavLM, frame/adaptive ~0.5) -> negative result is representation-class independent; F-POSITIVE: adaptive <= frame at some N or frame/adaptive > 0.9 -> segmentation competitive on acoustic features; PARTIAL: frame/adaptive in (0.7, 0.9). Sanity: adaptive must beat uniform (as on WavLM in B).",
+    "output": "experiments\\results_experiment_f_lowrate_billed.json"
+  },
+  "points": [
+    {
+      "arm": "adaptive",
+      "K": 32,
+      "codebook": 4,
+      "dims": 32,
+      "mse": 0.44765168929875926,
+      "perplexity": 3.3665544191996255,
+      "bits_per_utt_exact": 228.68357377840653,
+      "bits_per_utt_adj": 64.0,
+      "bits_per_sec_exact": 37.98568301888709,
+      "train_seconds": 52.5,
+      "wall_seconds": 54.6
+    },
+    {
+      "arm": "uniform",
+      "K": 32,
+      "codebook": 4,
+      "dims": 32,
+      "mse": 0.6216310053812351,
+      "perplexity": 3.317005475362142,
+      "bits_per_utt_exact": 64.0,
+      "bits_per_utt_adj": 64.0,
+      "bits_per_sec_exact": 10.630775411811973,
+      "train_seconds": 32.7,
+      "wall_seconds": 32.7
+    },
+    {
+      "arm": "frame",
+      "K": 32,
+      "codebook": 4,
+      "dims": 32,
+      "mse": 0.3147203012241231,
+      "perplexity": 3.2946587800979614,
+      "bits_per_utt_exact": 1037.0833333333333,
+      "bits_per_utt_adj": 1037.0833333333333,
+      "bits_per_sec_exact": 172.265625,
+      "train_seconds": 22.4,
+      "wall_seconds": 22.4
+    },
+    {
+      "arm": "adaptive",
+      "K": 32,
+      "codebook": 8,
+      "dims": 32,
+      "mse": 0.445286679624697,
+      "perplexity": 6.70203423500061,
+      "bits_per_utt_exact": 260.6835737784066,
+      "bits_per_utt_adj": 96.0,
+      "bits_per_sec_exact": 43.30107072479308,
+      "train_seconds": 52.3,
+      "wall_seconds": 52.4
+    },
+    {
+      "arm": "uniform",
+      "K": 32,
+      "codebook": 8,
+      "dims": 32,
+      "mse": 0.5551319659546514,
+      "perplexity": 7.072019894917806,
+      "bits_per_utt_exact": 96.0,
+      "bits_per_utt_adj": 96.0,
+      "bits_per_sec_exact": 15.94616311771796,
+      "train_seconds": 35.3,
+      "wall_seconds": 35.3
+    },
+    {
+      "arm": "frame",
+      "K": 32,
+      "codebook": 8,
+      "dims": 32,
+      "mse": 0.23543959504308448,
+      "perplexity": 6.939649264017741,
+      "bits_per_utt_exact": 1555.625,
+      "bits_per_utt_adj": 1555.625,
+      "bits_per_sec_exact": 258.3984375,
+      "train_seconds": 23.8,
+      "wall_seconds": 23.8
+    },
+    {
+      "arm": "adaptive",
+      "K": 32,
+      "codebook": 16,
+      "dims": 32,
+      "mse": 0.4013176802424553,
+      "perplexity": 14.54209534327189,
+      "bits_per_utt_exact": 292.6835737784066,
+      "bits_per_utt_adj": 128.0,
+      "bits_per_sec_exact": 48.61645843069907,
+      "train_seconds": 55.6,
+      "wall_seconds": 55.6
+    },
+    {
+      "arm": "uniform",
+      "K": 32,
+      "codebook": 16,
+      "dims": 32,
+      "mse": 0.5329685700495304,
+      "perplexity": 13.634350935618082,
+      "bits_per_utt_exact": 128.0,
+      "bits_per_utt_adj": 128.0,
+      "bits_per_sec_exact": 21.261550823623946,
+      "train_seconds": 17.5,
+      "wall_seconds": 17.5
+    },
+    {
+      "arm": "frame",
+      "K": 32,
+      "codebook": 16,
+      "dims": 32,
+      "mse": 0.1895181250487192,
+      "perplexity": 14.414714018503824,
+      "bits_per_utt_exact": 2074.1666666666665,
+      "bits_per_utt_adj": 2074.1666666666665,
+      "bits_per_sec_exact": 344.53125,
+      "train_seconds": 12.3,
+      "wall_seconds": 12.3
+    }
+  ]
+}
