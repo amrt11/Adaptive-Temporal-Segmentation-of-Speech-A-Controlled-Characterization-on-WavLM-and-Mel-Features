@@ -92,6 +92,10 @@ negative_result_paper.md
 README_LATEX.md
 GIT_SETUP_SUMMARY.md
 
+# Double-blind: main paper and readme (may contain identifying info)
+paper.md
+README.md
+
 # Submission directories
 scitech_nepal/
 
