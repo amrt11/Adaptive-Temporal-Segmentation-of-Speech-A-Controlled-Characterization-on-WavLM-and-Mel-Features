@@ -60,9 +60,17 @@ experiments/*.npz
 cleanup/
 ANALYSIS.md
 
-# Results (keep JSON files, ignore backups)
-*_partial.bak.json
-*_smoke.json
+# Results (keep JSON files, ignore backups and diagnostics)
+experiments/*_partial.bak.json
+experiments/*_smoke.json
+experiments/*_diagnostics.json
+experiments/*_reset.json
+experiments/*_s11.json
+experiments/*_s3.json
+experiments/*_tol0.json
+experiments/*_tol1.json
+experiments/*_nopd.json
+experiments/results_matched_rate_multiseed.partial.bak.json
 
 # Alignment directories (large, can be regenerated)
 experiments/alignments_c/
