@@ -71,3 +71,28 @@ experiments/alignments_c_smoke/
 # Environment files
 .env
 .env.local
+
+# Additional paper formats and drafts
+*.docx
+*.pdf
+*.tex
+*.bib
+paper_condensed*.md
+paper_njst.tex
+references.bib
+negative_result_paper.md
+README_LATEX.md
+GIT_SETUP_SUMMARY.md
+
+# Submission directories
+scitech_nepal/
+
+# Additional internal docs
+docs/archive_analysis_superseded.md
+docs/experiment_b_plan.md
+docs/experiment_b_vq.md
+docs/fastspeech_as_segmentation.md
+docs/image_segmentation.md
+docs/priority_implementations.md
+docs/revision2_runs.md
+docs/tts_as_segmentation.md
